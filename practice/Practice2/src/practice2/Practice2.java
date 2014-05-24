@@ -131,16 +131,119 @@ public class Practice2 {
         }
         //cicle 9
         System.out.print("\n");
-        int prome;
-        int cantNu = 0;
-        int cont=0;
-        while (10<=cont) {            
-            cont++;
-            System.out.println("Digite los numeros");
-            cantNu=Integer.parseInt(teclado.nextLine());
-            
-            
-            
+        int numPromedio;
+        int suma = 0;
+        for (int i = 0; i <= 10; i++) {
+            System.out.println("Ingrese el numero");
+            numPromedio = Integer.parseInt(teclado.nextLine());
+            suma += numPromedio;
+        }
+        numPromedio = suma / 10;
+        System.out.println("El promedio es :" + "\n" + numPromedio);
+        // cicle  10.
+        System.out.println("\n");
+        int calificacion;
+        int cont = 0;
+        int sumass = 0;
+        int promedioss = 0;
+        do {
+            System.out.println("Digite la nota o cero si desea salir ");
+            calificacion = Integer.parseInt(teclado.nextLine());
+            if (calificacion < 0 && calificacion >= 10) {
+                sumass += calificacion;
+                cont++;
+                promedioss = sumass / cont;
+            } else {
+                calificacion = 0;
+            }
+
+            System.out.println("El promedio es de : " + "\n" + promedioss);
+
+        } while (calificacion != 0);
+
+        //Cicle 11
+        System.out.println("\n");
+
+        int conv;
+        for (int i = 1; i <= 10; i++) {
+            conv = i * 560;
+            System.out.println("$" + i + " " + "son " + conv + "colones ");
+
+        }
+
+        
+        //Cicle 12
+        System.out.println("\n");
+        
+
+        double interes;
+        //double total;
+        double monto = 1000;
+        for (int i = 0; i <= 12; i++) {
+            interes = monto * 0.02;
+            monto += interes;
+        }
+        System.out.println("El monto ghanado es : "+"\n" + monto);
+
+       
+        //Cicle 13
+        System.out.println("\n");
+
+        int nummin = 0;
+        int numhora = 0;
+
+        do {
+            for (int j = 0; j <= 60; j++) {
+                if (j <= 59) {
+                    System.out.println(numhora + ":" + nummin + ":" + j);
+                }
+                if (j >= 60) {
+                    nummin++;
+                    j = 0;
+                }
+                if (nummin >= 60) {
+                    numhora++;
+                    nummin = 0;
+                }
+                if (numhora == 24) {
+                    j = 61;
+                }
+
+            }
+
+        } while (numhora != 24);
+
+        //Cicle 14
+        System.out.println("/n");
+
+       
+        int meses = 1;
+        double inte;
+        double monto1 = 1000;
+        while (monto1 <= 1500) {
+            inte = monto * 0.02;
+            monto1 += inte;
+            meses++;
+        }
+        System.out.println("Meses" + meses);
+
+           
+        //Cicle 15
+        System.out.println("\n");
+        int numm = 1;
+        int filas;
+
+        System.out.println("Digite el nume1ro de filas");
+        filas = Integer.parseInt(teclado.nextLine());
+
+        for (int i = 1; i <= filas; i = i + 2) {
+
+            for (int e = 1; e <= numm; e = e + 2) {
+                System.out.print(e + " ");
+
+            }
+            numm = i + 2;
+            System.out.println("");
         }
 
     }
