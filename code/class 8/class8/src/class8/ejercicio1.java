@@ -52,22 +52,48 @@ public class ejercicio1 {
                 } else {
                     Subcadena = getCadena().substring(inicioLetra, finalLetra);
 
-                } if(pPalabra.equals(Subcadena)){
-                    mensaje+="-"+Subcadena+' ';
-                    
-                    
-                } else {
-                    mensaje+=Subcadena+" ";
-                    inicioLetra=i+1;
                 }
-                    
+                if (pPalabra.equals(Subcadena)) {
+                    mensaje += '-' + Subcadena + ' ';
+
+                } else {
+                    mensaje += Subcadena + ' ';
+                }
+                inicioLetra = i + 1;
+
+            }
+        }
+
+        return mensaje;
+
+    }
+
+    public int contadorpalabra(String pPalabra) {
+        int conto = 0;
+        String Subcadena = "";
+        int inicioLetra = 0, finalLetra;
+        for (int i = 0; i < getCadena().length(); i++) {
+            if (getCadena().charAt(i) == ' ' || getCadena().length() - 1 == i) {
+                finalLetra = i;
+                if (getCadena().length() - 1 == i) {
+                    Subcadena = getCadena().substring(inicioLetra);
+
+                } else {
+                    Subcadena = getCadena().substring(inicioLetra, finalLetra);
+
+                }
+                if (pPalabra.equals(Subcadena)) {
+                    conto++;
+
+                } 
+                    inicioLetra = i + 1;
+                
 
             }
 
         }
 
-        
-        return mensaje;
+        return conto;
 
     }
 

@@ -12,4 +12,10 @@ package class8;
  */
 public class ejercicio2 {
     
+    public String substring( int pbegin, int pend){
+        
+        
+        return null;
+        
+    }
 }
